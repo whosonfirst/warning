@@ -1,4 +1,4 @@
-# warning [![GoDoc](https://godoc.org/github.com/lunemec/warning?status.svg)](http://godoc.org/github.com/lunemec/warning)
+# warning [![GoDoc](https://godoc.org/github.com/lunemec/warning?status.svg)](http://godoc.org/github.com/lunemec/warning) [![Go Report Card](https://goreportcard.com/badge/github.com/lunemec/warning)](https://goreportcard.com/report/github.com/lunemec/warning)
 Package warning provides a simple way to handle errors that should not stop
 execution (return err), but rather continue.
 
