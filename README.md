@@ -16,7 +16,7 @@ error that should just be logged?
 This package provides you with just that.
 
 ```go
-if err != nil && warning.IsWarning(err) {
+if err != nil && !warning.IsWarning(err) {
 	//This is executed only if err is not a warning.
 	return
 }
