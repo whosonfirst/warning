@@ -56,5 +56,9 @@ func IsWarning(err error) bool {
 
 // Wrap wraps any error into Warning.
 func Wrap(err error) error {
+	// Do not wrap nil.
+	if err == nil {
+		return nil
+	}
 	return Warning{err}
 }

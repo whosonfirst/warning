@@ -37,6 +37,18 @@ func TestNil(t *testing.T) {
 	}
 }
 
+// TestWrapNil tests the case when we use multierror's ErrorOrNil() function
+// and it returns nil.
+func TestWrapNil(t *testing.T) {
+	err := warning.Wrap(nil)
+	if err != nil {
+		t.Errorf("wrapped nil should be a nil")
+	}
+	if warning.IsWarning(err) {
+		t.Errorf("wrapped nil should not be a warning")
+	}
+}
+
 // TestErrorIsNotWarning tests if common error is not a Warning.
 func TestErrorIsNotWarning(t *testing.T) {
 	err := fmt.Errorf("common error")
