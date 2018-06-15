@@ -97,3 +97,16 @@ func TestMultierrNonWarning(t *testing.T) {
 		t.Errorf("this should not execute")
 	}
 }
+
+// TestUnderlyingCause tests if we can access the underlying cause and its type.
+func TestUnderlyingCause(t *testing.T) {
+	var multierr *multierror.Error
+
+	err := warning.Wrap(multierr)
+	warn := err.(warning.Warning)
+	cause := warn.Cause()
+	_, ok := cause.(*multierror.Error)
+	if !ok {
+		t.Errorf("Warning's cause is incorrect type.")
+	}
+}

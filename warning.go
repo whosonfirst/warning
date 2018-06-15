@@ -62,3 +62,8 @@ func Wrap(err error) error {
 	}
 	return Warning{err}
 }
+
+// Cause returns the underlying cause of Warning.
+func (w *Warning) Cause() error {
+	return w.error
+}
