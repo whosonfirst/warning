@@ -2,5 +2,3 @@
 github.com/hashicorp/errwrap
 # github.com/hashicorp/go-multierror v0.0.0-20171204182908-b7773ae21874
 github.com/hashicorp/go-multierror
-# github.com/pkg/errors v0.8.0
-github.com/pkg/errors
